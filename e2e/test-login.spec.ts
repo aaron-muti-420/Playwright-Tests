@@ -7,6 +7,7 @@ test('test', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Password' }).click();
   await page.getByRole('textbox', { name: 'Password' }).fill('Bdvoct@2025');
   await page.locator('cgp-button').click();
-});
+  await expect(page).toHaveURL('https://bw-niss.dev-k8s.bdv.local/dashboard');
+}
+);
 
-8000661544
