@@ -2,9 +2,10 @@ import { test, expect } from '@playwright/test';
 import { CONFIG } from '../config/test.config';
 import { login, searchCustomer, fillTransactionDetails } from '../utils/test-helpers';
 
-test('create outgoing transaction', async ({ page }) => {
+test('create-outgoing-transaction', async ({ page }) => {
     // Login
     await login(page);
+    
 
     // Navigate to create transaction
     await page.getByRole('button', { name: 'Outgoing', exact: true }).click();
